@@ -1,0 +1,33 @@
+package com.example.reservationservice.entity;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CustomResponseModel {
+
+	public CustomResponseModel() {}
+	public CustomResponseModel(int statusCode, String message) {
+		this.statusCode = statusCode;
+		this.message = message;
+	}
+	
+	private int statusCode;
+	private String message;
+	public int getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	@Override
+	public String toString() {
+		return "ErrorResponseModel [statusCode=" + statusCode + ", message=" + message + "]";
+	}	
+	
+}
